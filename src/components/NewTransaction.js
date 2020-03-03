@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { TextField, Button } from "@material-ui/core";
-import Grid from "@material-ui/core/grid";
+import { Grid } from "@material-ui/core";
 import { GlobalContext } from "../GlobalState";
 
 export default function NewTransaction() {
