@@ -1,25 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+import HistoryMoney from "./components/HistoryMoney";
+import MoneyData from "./components/MoneyData";
+import NewTransaction from "./components/NewTransaction";
+
+import { GlobalProvider } from "./GlobalState";
+
+import { Container } from "@material-ui/core";
+
+import "./App.sass";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container maxWidth="sm">
+      <GlobalProvider>
+        <div className="wrapper">
+          <MoneyData />
+          <HistoryMoney />
+          <NewTransaction />
+        </div>
+      </GlobalProvider>
+    </Container>
   );
 }
 

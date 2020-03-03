@@ -1,0 +1,109 @@
+body
+  background: #00B4DB;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 0
+  margin: 0
+
+.MuiContainer-root
+
+  padding-left: 8px
+  padding-right: 8px
+
+.wrapper
+  margin-top: 2rem
+  margin-bottom: 2rem
+  font-family: 'Roboto', sans-serif
+  padding: 2rem 3rem
+  border-radius: 8px
+  box-shadow: 8px 8px 14px rgba(0,0,0,.2)
+  background: #fff
+
+.moneyData
+  & h1
+    text-align: center
+    font-weight: 200
+  & .balance
+    font-size: 1.2rem
+    &__yourBalance
+      display: block
+      width: 100%
+      font-weight: bold
+      font-size: 1.4rem
+    &-data
+      width: 100%
+      display: flex
+      box-shadow: 8px 8px 14px rgba(0,0,0,.2)
+      padding: 2rem
+      box-sizing: border-box
+      margin: 1rem 0rem
+      border-radius: 4px
+      &__income,&__expense
+        flex: 1
+        text-align: center
+      &__income
+        border-right: 1px solid #eee
+
+.historyMoney
+  margin: 2rem 0rem
+  & h2
+    font-weight: 400
+
+.newTransaction
+  & h2
+    font-weight: 400
+  & button
+    width: 100%
+    margin-top: 1.5rem
+
+.transaction
+  padding: .5rem
+  margin: .3rem 0rem
+  background: #fff
+  border-right: 4px solid #fff
+  cursor: pointer
+  display: flex
+  justify-content: space-between
+  position: relative
+  background: #eee
+  animation: fadeUp .6s ease-in-out
+
+  &-expense
+    border-right: 2px solid red
+  &-income
+    border-right: 2px solid green
+  &-delete
+    position: absolute
+    left: -2.5rem
+    top: 50%
+    transform: translateY(-50%) translateX(120%)
+    opacity: 0
+    border-radius: 100%
+    background: crimson
+    color: white
+    padding: .5rem .8rem
+    transition: .3s
+    font-weight: bold
+    @media screen and (hover: none) and (pointer: coarse)
+      left: -3rem
+      transform: translateY(-50%) translateX(20%)
+      opacity: 1
+
+  &:hover &-delete
+    transform: translateY(-50%) translateX(0%)
+    opacity: 1
+    transition: .3s
+
+.green
+  color: green
+.red
+  color: crimson
+
+hr
+  border: .5px solid #eee
+
+@keyframes fadeUp
+  0%
+    opacity: 0
+  100%
+    transform: inherit
